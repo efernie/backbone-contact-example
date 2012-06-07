@@ -10,18 +10,21 @@ require([
 
   ],
 
-  function( FernsWorld, $, _ , Backbone, views ){
+  function( FernsWorld, $, _, Backbone, views ){
 
+    // A view Manager to tigger the different views after the routes
     FernsWorld.ViewManager = function(page) {
       switch (page) {
         case 'home':
-          new FernsWorld.Views.Contact({ model : new FernsWorld.Models.Contact() });
+          //new FernsWorld.Views.Contact({ model : new FernsWorld.Models.Contact() });
+          new FernsWorld.Views.Contact();
         break;
       }
     };
 
     //Router
     FernsWorld.Router.Main = Backbone.Router.extend({
+      // These are the routes for the different Pages
       routes : {
           '': 'index'
         , ':page': 'pages'

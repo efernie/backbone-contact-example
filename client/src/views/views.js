@@ -8,32 +8,41 @@ define([
   'backbone',
 
   // Models
-  '../models/models'
+  '../models/models',
+
+  // Collections
+  '../collections/collections'
 ],
 
-function( FernsWorld, $, _, Backbone, models ) {
+function( FernsWorld, $, _, Backbone, models, collections ) {
 
-  // The Add Contact VIew
+  // The Add Contact View
   FernsWorld.Views.Contact = Backbone.View.extend({
     el : '#addContact',
     events : {
       'click #submit' : 'saveContact'
     },
     initialize : function(){
-
+      FernsWorld.Collections.ContactCollections = new FernsWorld.Collections.Contacts();
     },
     saveContact : function(event){
       event.preventDefault();
 
-      var values = $(event.currentTarget).parent().serializeArray();
-      console.log(values ,_)
-      _.each(values,function(v,k){
-        console.log(v,k)
-      })
+      this.model = new FernsWorld.Models.Contact();
 
-      //this.model.set( values );
-      console.log( this.model )
-      //this.model.isValid();
+      var values = $(event.currentTarget).parent().serializeArray()
+        , modelObj = {}
+        ;
+
+      // Go through the Array's Values and Keys and psuh them into a new object
+      _.each(values,function(v){
+        modelObj[_.values(v)[0]] = _.values(v)[1];
+      });
+
+      // Set the Model
+      // The Model auto validates
+      this.model.set( modelObj );
+
     },
     render : function() {
 
