@@ -31,14 +31,12 @@ require([
       },
       index: function(){
         FernsWorld.loadPage('home',function(error){
-          //console.log(error);
           FernsWorld.ViewManager('home');
         });
       },
       pages : function(page){
         console.log(page)
         FernsWorld.loadPage(page ,function(error){
-          console.log(error.error)
           if ( error.error === true ) {
             return FernsWorld.errorHandler();
           }
@@ -56,5 +54,8 @@ require([
       Backbone.history.start();
     });
 
+    // Expose to the Global Objects
+    window.FernsWorld = FernsWorld;
   }
+
 );

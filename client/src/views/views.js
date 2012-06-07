@@ -23,11 +23,18 @@ function( FernsWorld, $, _, Backbone, models, collections ) {
       'click #submit' : 'saveContact'
     },
     initialize : function(){
+
+      // Start the collection
       FernsWorld.Collections.ContactCollections = new FernsWorld.Collections.Contacts();
+      // Fetch the Collection
+      FernsWorld.Collections.ContactCollections.fetch();
+
     },
     saveContact : function(event){
+      // Prevent the Default Submit Funciton
       event.preventDefault();
 
+      // Create a New Model
       this.model = new FernsWorld.Models.Contact();
 
       var values = $(event.currentTarget).parent().serializeArray()
@@ -41,7 +48,8 @@ function( FernsWorld, $, _, Backbone, models, collections ) {
 
       // Set the Model
       // The Model auto validates
-      this.model.set( modelObj );
+      console.log(modelObj)
+      return this.model.set( modelObj );
 
     },
     render : function() {
