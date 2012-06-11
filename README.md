@@ -8,8 +8,7 @@ Backbone Example
 ### Front End
   - [jQuery](https://github.com/jquery/jquery)
   - [Backbone](https://github.com/documentcloud/backbone)
-    - [lodash](https://github.com/bestiejs/lodash)
-      - I have used lodash because underscore has stripped the AMD support
+    - [lodash](https://github.com/bestiejs/lodash) - I have used lodash because underscore has stripped the AMD support
   - [Require.js](https://github.com/jrburke/requirejs)
     - Template Plugin
       - [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin)
