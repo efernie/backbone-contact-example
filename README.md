@@ -3,11 +3,15 @@ Backbone Example
 
 ### This is my attempt to make and example Contact Manager for a blog post.
 
+### Version: 0.1
+
 ##Table Of Contents
 
 * [Introduction](#introduction)
 * [Libraries Used](#libsused)
 * [First Steps](#firststeps)
+
+* [Change Log](#changelog)
 
 <a name="introduction"> Introduction: </a>
 ---
@@ -35,3 +39,6 @@ Backbone Example
 ---
 
 1.
+
+
+<a name="changelog"> Change Log:</a>
