@@ -3,8 +3,18 @@ Backbone Example
 
 ### This is my attempt to make and example Contact Manager for a blog post.
 
-## Libraries Used: ##
+##Table Of Contents
 
+* ####[Introduction](#introduction)
+* ####[Libraries Used:](#libsused)
+* ####[First Steps:](#firststeps)
+
+<a name="introduction"> Introduction: </a>
+---
+
+
+<a name="libsused"> Libraries Used: </a>
+---
 ### Front End
   - [jQuery](https://github.com/jquery/jquery)
   - [Backbone](https://github.com/documentcloud/backbone)
@@ -19,3 +29,9 @@ Backbone Example
   - [express](https://github.com/visionmedia/express)
   - [underscore](https://github.com/documentcloud/underscore)
   - [connect-gzip](https://github.com/nateps/connect-gzip)
+
+
+<a name="firststeps"> First Steps: </a>
+---
+
+1.

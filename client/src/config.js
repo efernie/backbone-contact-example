@@ -9,7 +9,6 @@ require.config({
     // Use lodash because underscore has removed AMD support
     underscore: '../assets/js/lodash.min',
     backbone: '../assets/js/backbone.min',
-    //text: '../assets/js/text',
 
     // These are for the template handling
     hbs: '../assets/js/hbs',
