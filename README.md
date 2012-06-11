@@ -5,9 +5,9 @@ Backbone Example
 
 ##Table Of Contents
 
-* ####[Introduction](#introduction)
-* ####[Libraries Used:](#libsused)
-* ####[First Steps:](#firststeps)
+* [Introduction](#introduction)
+* [Libraries Used](#libsused)
+* [First Steps](#firststeps)
 
 <a name="introduction"> Introduction: </a>
 ---
