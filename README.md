@@ -38,7 +38,9 @@ Backbone Example
 <a name="firststeps"> First Steps: </a>
 ---
 
-1.
+  1. Install Node [Install Wiki Page](https://github.com/joyent/node/wiki/Installation)
+    * I personally like to install node from the source.
 
 
 <a name="changelog"> Change Log:</a>
+---
