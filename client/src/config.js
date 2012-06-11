@@ -9,13 +9,22 @@ require.config({
     // Use lodash because underscore has removed AMD support
     underscore: '../assets/js/lodash.min',
     backbone: '../assets/js/backbone.min',
-    text: '../assets/js/text'
+    text: '../assets/js/text',
+    hbs: '../assets/js/hbs',
+    Handlebars: '../assets/js/handlebars',
+    i18nprecompile : '../assets/js/i18nprecompile',
+    json2 : '../assets/js/json2'
   },
   shim: {
     backbone: {
       deps: ['underscore','jquery'],
       exports: 'Backbone'
     }
+  },
+  hbs : {
+      templateExtension : 'hbs',
+      disableHelpers: true,
+      disableI18n : true
   }
 
 });

@@ -6,6 +6,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'hbs',
+  //'handlebars',
 
   // Models
   '../models/models',
@@ -23,9 +25,21 @@ function( FernsWorld, $, _, Backbone, models, collections ) {
       'click #submit' : 'saveContact'
     },
     initialize : function(){
+      var that = this;
 
       // Start the collection
       FernsWorld.Collections.ContactCollections = new FernsWorld.Collections.Contacts();
+
+      this.collection = FernsWorld.Collections.ContactCollections;
+      // Bind the reset event which happens when the collection is fetched from the server
+      FernsWorld.Collections.ContactCollections.on('reset',function(event){
+        that.render();
+      });
+
+      FernsWorld.Collections.ContactCollections.on('add',function(event){
+        that.render();
+      });
+
       // Fetch the Collection
       FernsWorld.Collections.ContactCollections.fetch();
 
@@ -53,6 +67,14 @@ function( FernsWorld, $, _, Backbone, models, collections ) {
 
     },
     render : function() {
+      var that = this;
+
+      // Require the contact template
+      require(['hbs!templates/contact'], function(contactView) {
+        _.each(that.collection.models,function(model){
+          that.$el.append( contactView( model.attributes ) );
+        });
+      });
 
     }
   });
