@@ -38,6 +38,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   - [connect-gzip](https://github.com/nateps/connect-gzip)
 
 <a name="directorystructure"> Directory Structure: </a>
+---
   Here is the directory structure:
 
   ```
@@ -66,7 +67,11 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
     * I personally like to install node from the source, that way when you need to update node all you have
     to do is update the repo on you machine and check out the new branch and re-make node.
 
-  2. Create a config.js file.
+  2. Create a new Directory
+
+  3.
+
+  #. Create a config.js file.
 
 
 ```javascript
