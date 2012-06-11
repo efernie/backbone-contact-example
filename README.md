@@ -11,6 +11,7 @@ Backbone Example
 * [Libraries Used](#libsused)
     * Front End
     * Back End
+* [Directory Structure](#directorystructure)
 * [First Steps](#firststeps)
 
 * [Change Log](#changelog)
@@ -36,6 +37,27 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   - [underscore](https://github.com/documentcloud/underscore)
   - [connect-gzip](https://github.com/nateps/connect-gzip)
 
+<a name="directorystructure"> Directory Structure: </a>
+  Here is the directory structure:
+
+  ```
+--client
+----assets
+------css
+------img
+------js
+----src
+------collections
+------models
+------templates
+------views
+
+--server
+----lib
+----node_modules
+----views
+
+```
 
 <a name="firststeps"> First Steps: </a>
 ---
