@@ -1,6 +1,10 @@
-#This is my attempt to make and example Contact Manager for a blog post.
+Backbone Example
+================
 
-Using:
+This is my attempt to make and example Contact Manager for a blog post.
+-----------------------------------------------------------------------
+
+## Libraries Used: ##
   - Backbone
     - lodash
   - Require.js
