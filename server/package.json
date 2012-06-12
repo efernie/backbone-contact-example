@@ -6,6 +6,7 @@
     "express": "2.x",
     "underscore": "1.x",
     "jade": "0.20.x",
-    "connect-gzip": "x"
+    "connect-gzip": "x",
+    "grunt": "0.3.9"
   }
 }

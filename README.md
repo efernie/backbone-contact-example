@@ -37,6 +37,13 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   - [underscore](https://github.com/documentcloud/underscore)
   - [connect-gzip](https://github.com/nateps/connect-gzip)
 
+## Front End Libraries:
+
+### jQuery
+>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.
+>
+
+
 <a name="directorystructure"> Directory Structure: </a>
 ---
   Here is the directory structure:
