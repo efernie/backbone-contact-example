@@ -67,7 +67,10 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
     * I personally like to install node from the source, that way when you need to update node all you have
     to do is update the repo on you machine and check out the new branch and re-make node.
 
-  2. Create a new Directory
+    * If you already have node installed you can just clone therepo and delete the node_modules folder
+      and run npm install.
+
+  2. Create a new Directory (eg. Backbone Example)
 
   3.
 
