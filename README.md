@@ -66,7 +66,6 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   1. Install Node [Install Wiki Page](https://github.com/joyent/node/wiki/Installation)
     * I personally like to install node from the source, that way when you need to update node all you have
     to do is update the repo on you machine and check out the new branch and re-make node.
-
     * If you already have node installed you can just clone therepo and delete the node_modules folder
       and run npm install.
 
@@ -74,7 +73,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
   3.
 
-  #. Create a config.js file.
+  4. Create a config.js file.
 
 
 ```javascript
