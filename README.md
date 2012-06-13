@@ -9,8 +9,8 @@ Backbone Example
 
 * [Introduction](#introduction)
 * [Libraries Used](#libsused)
-    * Front End
-    * Back End
+    * [Front End](#frontEnd)
+    * [Back End](#backEnd)
 * [Directory Structure](#directorystructure)
 * [First Steps](#firststeps)
 
@@ -22,15 +22,16 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
 <a name="libsused"> Libraries Used: </a>
 ---
-### Front End
+### <a name="frontEnd">Front End </a>
   - [jQuery](https://github.com/jquery/jquery)
   - [Backbone](https://github.com/documentcloud/backbone)
     - [lodash](https://github.com/bestiejs/lodash) - I have used lodash because underscore has stripped the AMD support
   - [Require.js](https://github.com/jrburke/requirejs)
-    - Template Plugin
-      - [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin)
+      - [require-handlebars-plugin](https://github.com/SlexAxton/require-handlebars-plugin) - Template Plugin
+  - [LESS](https://github.com/cloudhead/less.js)
+      * This is **only** for **development**! I always compile to css when in production.
 
-### Back End
+### <a name="backEnd">Back End </a>
   - [Node.js](https://github.com/joyent/node)
   - [jade](https://github.com/visionmedia/jade)
   - [express](https://github.com/visionmedia/express)
@@ -63,9 +64,9 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 <a name="firststeps"> First Steps: </a>
 ---
 
-  1. Install Node [Install Wiki Page](https://github.com/joyent/node/wiki/Installation)
+  1. Install Node ( [Install Wiki Page](https://github.com/joyent/node/wiki/Installation) )
     * I personally like to install node from the source, that way when you need to update node all you have
-    to do is update the repo on you machine and check out the new branch and re-make node.
+      to do is update the repo on you machine and check out the new branch and re-make node.
     * If you already have node installed you can just clone therepo and delete the node_modules folder
       and run npm install.
 
@@ -75,8 +76,13 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   3. Create a server to work on this locally
     * You can use the server files I have provided or spin up your own.
 
-  4. Create a config.js file.
-    a. Place it in the ```src``` folder
+  4. Start to create the first page.
+    * I use jade to write the base page structure
+
+
+  ---
+  \#. Create a config.js file.
+    * Place it in the ```src``` folder.
 
 
 ```javascript
@@ -110,6 +116,8 @@ require.config({
   }
 });
 ```
+
+
 
 <a name="changelog"> Change Log:</a>
 ---
