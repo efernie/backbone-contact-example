@@ -5,7 +5,7 @@ var express = require('express')
   , gzip = require('connect-gzip')
   , app = express.createServer()
   , publicDir = __dirname + '/../client'
-;
+  ;
 
 
 app.set('views', __dirname + '/views')

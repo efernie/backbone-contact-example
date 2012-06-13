@@ -83,10 +83,26 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 ---
   1. Installing the npm packages
 
-    a. First ```npm install express```
+    a. ```npm install express```
+    b. ```npm install connect-gzip```
+
+  2. Create the ```index.js``` file
+
+    a. The ```index.js``` should look simmilar to this
+    * To start define the modules needed
+    ```javascript
+      var express = require('express')
+        , ENV = process.env['NODE_ENV'] || 'development'
+        , config = require('./config')[ENV]
+        , cluster = require('cluster')
+        , gzip = require('connect-gzip')
+        , app = express.createServer()
+        , publicDir = __dirname + '/../client'
+        ;
+    ```
 
 
-<a name="startRequire"> Starting with Require</a>
+<a name="startRequire"> Starting with Require.JS</a>
 ---
   1. Create a config.js file.
     * Place it in the ```src``` folder under the ```client``` main folder.
