@@ -84,12 +84,13 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   1. Installing the npm packages
 
     a. ```npm install express```
+
     b. ```npm install connect-gzip```
 
   2. Create the ```index.js``` file
 
 
-  * To start define the modules needed
+  * To start define the modules/other vars  needed
 
 
     ```javascript
