@@ -5,8 +5,13 @@ html(lang="en").no-js
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1", charset="utf-8")
     meta(name="viewport", content="width=device-width")
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Questrial|Press+Start+2P")
-    link(rel="stylesheet", href="/assets/css/style.css")
+    //link(rel="stylesheet", href="/assets/css/style.css")
+    // I am only using less because i prefer to use it wen developing
+    // Never use it in production always complie less to css!!!
+    link(rel="stylesheet/less", href="/assets/less/style.less")
     block styles
+
+    script(src="/assets/js/less-1.3.0.min.js")
     script(src="/assets/js/modernizr-2.5.3-respond-1.1.0.min.js")
   body
     header

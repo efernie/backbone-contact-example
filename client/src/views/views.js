@@ -67,9 +67,12 @@ function( FernsWorld, $, _, Backbone, models, collections ) {
         modelObj[_.values(v)[0]] = _.values(v)[1];
       });
 
+      // Empty the inputs
+      $(event.currentTarget).parent().children('input').val('');
+
       // Set the Model
       // The Model auto validates
-      console.log(modelObj)
+
       return this.model.set( modelObj );
 
     },

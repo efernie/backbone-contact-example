@@ -18,7 +18,7 @@ Backbone Example
 
 <a name="introduction"> Introduction: </a>
 ---
-This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works.
+This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
 
 <a name="libsused"> Libraries Used: </a>
 ---
@@ -70,10 +70,13 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
       and run npm install.
 
   2. Create a new Directory (eg. Backbone Example)
+    * Impliment [Directory Structure](#directorystructure)
 
-  3.
+  3. Create a server to work on this locally
+    * You can use the server files I have provided or spin up your own.
 
   4. Create a config.js file.
+    a. Place it in the ```src``` folder
 
 
 ```javascript

@@ -1,0 +1,58 @@
+@import: "/assets/less/reset.less";
+
+@lightBrown: rgb(217,206,178);
+@offBrown: rgb(148,140,117);
+@lightBlue: rgb(213,222,217);
+@brown: rgb(122,106,83);
+@midBlue: rgb(153,178,183);
+
+
+
+body{
+  background: @lightBlue;
+  color: @brown;
+  font-family: 'Questrial', sans-serif;
+}
+
+header nav li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+h1{
+  color: @brown;
+  font-family: 'Press Start 2P', cursive;
+}
+h2{
+  color: @offBrown;
+}
+a, a:visited, a:hover{
+  color: @brown;
+}
+
+#addContact{
+  border: 3px solid @offBrown;
+  height: 175px;
+  padding: 15px;
+  width: 175px;
+  .border-radius(5px);
+
+  input{
+    display: block;
+    margin-bottom: 10px;
+    width: 150px;
+    .border-radius(5px);
+  }
+}
+
+#listContacts{
+  border-top: 1px solid @offBrown;
+  margin: 15px 0 0 0;
+}
+
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
