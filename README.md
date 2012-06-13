@@ -9,11 +9,11 @@ Backbone Example
 
 * [Introduction](#introduction)
 * [Libraries Used](#libsused)
-    * [Front End](#frontEnd)
-    * [Back End](#backEnd)
+  * [Front End](#frontEnd)
+  * [Back End](#backEnd)
 * [Directory Structure](#directorystructure)
 * [First Steps](#firststeps)
-* [Working witrh Node](#workingNode)
+* [Working witrh Node/Jade](#workingNode)
 * [Starting with Require](#startRequire)
 * [Main Application](#mainApplication)
 
@@ -21,7 +21,7 @@ Backbone Example
 
 <a name="introduction"> Introduction: </a>
 ---
-This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
+This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node.js. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
 
 <a name="libsused"> Libraries Used: </a>
 ---
@@ -78,12 +78,11 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
   3. Create a server to work on this locally
     * You can use the server files I have provided or spin up your own.
-    *
 
-<a name="workingNode"> Working With Node.JS </a>
+<a name="workingNode"> Working With Node.JS/Jade </a>
 ---
-  4. Start to create the first page.
-    * I use jade to write the base page structure
+  1. Installing the npm packages
+    a. First ```npm install express```
 
 
 <a name="startRequire"> Starting with Require</a>
