@@ -13,6 +13,9 @@ Backbone Example
     * [Back End](#backEnd)
 * [Directory Structure](#directorystructure)
 * [First Steps](#firststeps)
+* [Working witrh Node](#workingNode)
+* [Starting with Require](#startRequire)
+* [Main Application](#mainApplication)
 
 * [Change Log](#changelog)
 
@@ -64,7 +67,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 <a name="firststeps"> First Steps: </a>
 ---
 
-  1. Install Node ( [Install Wiki Page](https://github.com/joyent/node/wiki/Installation) )
+  1. Install Node ([Install Wiki Page](https://github.com/joyent/node/wiki/Installation))
     * I personally like to install node from the source, that way when you need to update node all you have
       to do is update the repo on you machine and check out the new branch and re-make node.
     * If you already have node installed you can just clone therepo and delete the node_modules folder
@@ -75,14 +78,18 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
   3. Create a server to work on this locally
     * You can use the server files I have provided or spin up your own.
+    *
 
+<a name="workingNode"> Working With Node.JS </a>
+---
   4. Start to create the first page.
     * I use jade to write the base page structure
 
 
-  ---
-  \#. Create a config.js file.
-    * Place it in the ```src``` folder.
+<a name="startRequire"> Starting with Require</a>
+---
+  1. Create a config.js file.
+    * Place it in the ```src``` folder under the ```client``` main folder.
 
 
 ```javascript
@@ -117,6 +124,8 @@ require.config({
 });
 ```
 
+<a name="mainApplication"> Main Application</a>
+---
 
 
 <a name="changelog"> Change Log:</a>
