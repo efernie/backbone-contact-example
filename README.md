@@ -82,7 +82,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 <a name="workingNode"> Working With Node.JS/Jade </a>
 ---
   1. Installing the npm packages
-    a. First ```npm install express```
+      a. First ```npm install express```
 
 
 <a name="startRequire"> Starting with Require</a>
