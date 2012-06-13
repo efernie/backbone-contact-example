@@ -5,7 +5,6 @@
   "dependencies": {
     "express": "2.x",
     "underscore": "1.x",
-    "jade": "0.20.x",
     "connect-gzip": "x"
   }
 }

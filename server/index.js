@@ -22,11 +22,11 @@ app.use(express.bodyParser())
 app.use(express.static(__dirname + '/../client'));
 app.use(app.router);
 
-// require all business logic
+
 require('./lib')(app);
 
 if (cluster.isMaster) {
-  // Fork workers.
+
   for (var i = 0; i < 1; i++) {
     cluster.fork();
   }
@@ -35,8 +35,8 @@ if (cluster.isMaster) {
     console.log('worker ' + worker.pid + ' died');
   });
 } else {
-  app.listen(3002, function () {
+  app.listen(config.port, function () {
     var addr = app.address();
-    console.log(('   app listening on http://' + addr.address + ':' + addr.port));
+    console.log(('app listening on http://' + addr.address + ':' + addr.port));
   });
 }
