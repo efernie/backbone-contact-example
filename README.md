@@ -87,9 +87,8 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
     b. ```npm install connect-gzip```
 
   2. Create the ```index.js``` file
-
-    a. The ```index.js``` should look simmilar to this
-    * To start define the modules needed
+    - The ```index.js``` should look simmilar to this
+  * To start define the modules needed
 
 
     ```javascript
@@ -102,7 +101,6 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
         , publicDir = __dirname + '/../client'
         ;
     ```
-
 
   * Then the express logic
 
