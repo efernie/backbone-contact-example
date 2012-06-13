@@ -92,16 +92,16 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
     * To start define the modules needed
 
 
-    ```javascript
-      var express = require('express')
-        , ENV = process.env['NODE_ENV'] || 'development'
-        , config = require('./config')[ENV]
-        , cluster = require('cluster')
-        , gzip = require('connect-gzip')
-        , app = express.createServer()
-        , publicDir = __dirname + '/../client'
-        ;
-    ```
+      ```javascript
+        var express = require('express')
+          , ENV = process.env['NODE_ENV'] || 'development'
+          , config = require('./config')[ENV]
+          , cluster = require('cluster')
+          , gzip = require('connect-gzip')
+          , app = express.createServer()
+          , publicDir = __dirname + '/../client'
+          ;
+      ```
 
 
     * Then the express logic
