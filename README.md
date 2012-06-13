@@ -87,39 +87,39 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
     b. ```npm install connect-gzip```
 
   2. Create the ```index.js``` file
-    - The ```index.js``` should look simmilar to this
-  * To start define the modules needed
+
+    * To start define the modules needed
 
 
-    ```javascript
-      var express = require('express')
-        , ENV = process.env['NODE_ENV'] || 'development'
-        , config = require('./config')[ENV]
-        , cluster = require('cluster')
-        , gzip = require('connect-gzip')
-        , app = express.createServer()
-        , publicDir = __dirname + '/../client'
+      ```javascript
+        var express = require('express')
+          , ENV = process.env['NODE_ENV'] || 'development'
+          , config = require('./config')[ENV]
+          , cluster = require('cluster')
+          , gzip = require('connect-gzip')
+          , app = express.createServer()
+          , publicDir = __dirname + '/../client'
+          ;
+      ```
+
+    * Then the express logic
+
+
+      ```javascript
+        app.set('views', __dirname + '/views')
+          .set('view options', { 'layout': false, pretty: true })
+          .set('view engine', 'jade');
+
+
+        app.use(express.bodyParser())
+           .use(express.cookieParser())
+           .use(express.favicon())
+           .use(gzip.gzip({ flags: '--best' }))
         ;
-    ```
 
-  * Then the express logic
-
-
-    ```javascript
-      app.set('views', __dirname + '/views')
-        .set('view options', { 'layout': false, pretty: true })
-        .set('view engine', 'jade');
-
-
-      app.use(express.bodyParser())
-         .use(express.cookieParser())
-         .use(express.favicon())
-         .use(gzip.gzip({ flags: '--best' }))
-      ;
-
-      app.use(express.static(__dirname + '/../client'));
-      app.use(app.router);
-    ```
+        app.use(express.static(__dirname + '/../client'));
+        app.use(app.router);
+      ```
 
 <a name="startRequire"> Starting with Require.JS</a>
 ---
