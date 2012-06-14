@@ -308,6 +308,66 @@ require([
 
   At the start of the file you define what files you need to import. ```fernsworld``` is a file that has what is needed for the global project object. After you define the files that are needed for this file you assign a name to them.
 
+3. Define the global project
+
+```javascript
+  define([
+  'jquery',
+  'underscore',
+  'backbone'
+  ],
+
+  function( $, _, Backbone ) {
+
+    return {
+      // Set the global FernsWold Object with empty router,model,collection,view,template objects
+      Router : {},
+      Models : {},
+      Collections : {},
+      Views : {},
+      Templates : {}
+    };
+  });
+```
+
+  In this file I set empty objects for the routers, models, collections, views, and templates. This allows everything to be shared across the modules.
+
+  Then also in this file I define a load page function to handle the getting of pages and caching of them.
+
+  ```javascript
+    loadPage : function(name,cb){
+      var that = this
+        , $main = $('#main')
+        ;
+      // This determins if the page was already stored in the template object
+      if(that.Templates[name]){
+        $main
+          .empty()
+          .append(that.Templates[name]);
+        return cb({ error: false });
+      }
+      // If not already loaded into the template object call it from the server
+      $.ajax({
+        'url': '/' + name,
+        'type': 'GET',
+        'dataType': 'html',
+        'cache': false,
+        beforeSend : function(){
+          $main.empty();
+        },
+        success : function(data) {
+          that.Templates[name] = data;
+          $main.append(data);
+          return cb({ error : false });
+        },
+        error : function(data) {
+          return cb({ error : true })
+        }
+      });
+    },
+  ```
+
+  This file first checks to see if the page is already in the cache, if not it sends an ajax request to get the page. On the server side when it receives this request I am returning the view partial. After it recevies it, then puts it into the cache and appends it to the ```main``` element.
 
 <a name="changelog"> Change Log:</a>
 ---
