@@ -279,12 +279,12 @@ require.config({
 });
 ```
 
-  As you can see there are different configuration options.
-    - baseUrl : This is the base path where the application will look for the modules.
-    - deps : This script is triggered when require is defined.
-    - paths : These are for if some scripts are not in the main ```src``` folder. I usually put the other libraries in the assets folder.
-    - shim : This is usefull because backbone requires jQuery and underscore to be loaded first before it can load.
-    - hbs : Is the templating pulgin configuration.
+As you can see there are different configuration options.
+  - baseUrl : This is the base path where the application will look for the modules.
+  - deps : This script is triggered when require is defined.
+  - paths : These are for if some scripts are not in the main ```src``` folder. I usually put the other libraries in the assets folder.
+  - shim : This is usefull because backbone requires jQuery and underscore to be loaded first before it can load.
+  - hbs : Is the templating pulgin configuration.
 
 Now on to the main file
 
