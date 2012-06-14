@@ -21,7 +21,7 @@ Backbone Example
 
 <a name="introduction"> Introduction: </a>
 ---
-This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node.js. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
+This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
 
 <a name="libsused"> Libraries Used: </a>
 ---
@@ -35,7 +35,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
       * This is **only** for **development**! I always compile to css when in production.
 
 ### <a name="backEnd">Back End </a>
-  - [Node.js](https://github.com/joyent/node)
+  - [Node](https://github.com/joyent/node)
   - [jade](https://github.com/visionmedia/jade)
   - [express](https://github.com/visionmedia/express)
   - [underscore](https://github.com/documentcloud/underscore)
@@ -69,9 +69,8 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
   1. Install Node ([Install Wiki Page](https://github.com/joyent/node/wiki/Installation))
     * I personally like to install node from the source, that way when you need to update node all you have
-      to do is update the repo on you machine and check out the new branch and re-make node.
-    * If you already have node installed you can just clone therepo and delete the node_modules folder
-      and run npm install.
+      to do is update the repo on you machine and check out the new branch and re-make node. (Yes I know there are other options but this is my way.)
+    * If you already have node installed you can just clone the repo and run npm install.
 
   2. Create a new Directory (eg. Backbone Example)
     * Impliment [Directory Structure](#directorystructure)
@@ -79,7 +78,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
   3. Create a server to work on this locally
     * You can use the server files I have provided or spin up your own.
 
-<a name="workingNode"> Working With Node.JS/Jade </a>
+<a name="workingNode"> Working With Node/Jade </a>
 ---
   1. Installing the npm packages
 
@@ -103,6 +102,8 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
         , publicDir = __dirname + '/../client'
         ;
     ```
+
+  These are modules that node uses t
 
 
   * Then the express logic
