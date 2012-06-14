@@ -115,10 +115,10 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
 
   1. First you should should have define the vars that require the express framework logic as seen above.
-  2. Then take the ```app``` and setup the configuration
-  3. I am using Jade for the views so point it to the dir that is holdign the views.
-    * When using Jade you can use a layout which holds the head information and base scripts that are required on all the
-      pages.
+  2. Then take the ```app``` that was defined and setup the configuration for the server.
+  3. I am using Jade for the views so point it to the directory that is holding the views.
+      ``` app.set('views', __dirname + '/views') ```
+    * When using Jade you can use a layout which holds the header information and base scripts/styles that are required on all the pages.
 
 
   ```javascript
