@@ -89,9 +89,6 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   ```bash
     $ npm install express
-  ```
-
-  ```bash
     $ npm install connect-gzip
   ```
 
