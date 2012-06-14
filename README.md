@@ -351,7 +351,6 @@ require([
         'url': '/' + name,
         'type': 'GET',
         'dataType': 'html',
-        'cache': false,
         beforeSend : function(){
           $main.empty();
         },
@@ -367,7 +366,7 @@ require([
     },
   ```
 
-  This file first checks to see if the page is already in the cache, if not it sends an ajax request to get the page. On the server side when it receives this request I am returning the view partial. After it recevies it, then puts it into the cache and appends it to the ```main``` element.
+  This file first checks to see if the page is already in the cache, if not it sends an ajax request to get the page. On the server side when it receives this request I am returning the view partial. After it recevies it, then puts it into the cache and appends it to the ```main``` element after emptying the element.
 
 <a name="changelog"> Change Log:</a>
 ---

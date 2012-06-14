@@ -30,7 +30,6 @@ function( $, _, Backbone ) {
         'url': '/' + name,
         'type': 'GET',
         'dataType': 'html',
-        'cache': false,
         beforeSend : function(){
           $main.empty();
         },
