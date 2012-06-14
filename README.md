@@ -141,7 +141,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
     app.use(app.router);
   ```
 
-  3. Set up the Routes
+  \3. Set up the Routes
 
     If you look in the ```index.js``` file you can see this ```require('./lib')(app);``` after the server config options.
     I seperate the main server logic into the lib folder. This is so you can seperate the code in smaller files.
