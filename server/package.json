@@ -1,6 +1,6 @@
 {
-  "name": "Ember_Node_Tests",
-  "description": "Working with Ember and Node and Jade",
+  "name": "Backbone_Example",
+  "description": "Working with Backbone and Node and Jade",
   "version": "0.0.1",
   "dependencies": {
     "express": "2.x",

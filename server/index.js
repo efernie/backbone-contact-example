@@ -19,7 +19,7 @@ app.use(express.bodyParser())
    .use(gzip.gzip({ flags: '--best' }))
 ;
 
-app.use(express.static( publicDir ));
+app.use(express.static(publicDir));
 app.use(app.router);
 
 
@@ -27,9 +27,9 @@ require('./lib')(app);
 
 if (cluster.isMaster) {
 
-  for (var i = 0; i < 1; i++) {
+  for (var i = 1 - 1; i >= 0; i--) {
     cluster.fork();
-  }
+  };
 
   cluster.on('death', function(worker) {
     console.log('worker ' + worker.pid + ' died');
