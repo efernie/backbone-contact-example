@@ -279,14 +279,14 @@ require.config({
 });
 ```
 
-As you can see there are different configuration options.
+As you can see there are different configuration options. You do not need the .js extension on the files.
   - baseUrl : This is the base path where the application will look for the modules.
   - deps : This script is triggered when require is defined.
   - paths : These are for if some scripts are not in the main ```src``` folder. I usually put the other libraries in the assets folder.
   - shim : This is usefull because backbone requires jQuery and underscore to be loaded first before it can load.
-  - hbs : Is the templating pulgin configuration.
+  - hbs : Is the templating plugin configuration.
 
-Now on to the main file
+2. Now on to the main file.
 
 ```javascript
 require([
@@ -298,7 +298,6 @@ require([
 
   // Views
   'views/views'
-
   ],
 
   function( FernsWorld, $, _, Backbone, views ){
@@ -306,6 +305,9 @@ require([
   }
 );
 ```
+
+  At the start of the file you define what files you need to import. ```fernsworld``` is a file that has what is needed for the global project object. After you define the files that are needed for this file you assign a name to them.
+
 
 <a name="changelog"> Change Log:</a>
 ---
