@@ -221,14 +221,8 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
   ```
 
   * This would be what the index page might contain.
-  * As you can see with the
-  ```jade
-    extends layout
-  ``` at the top it takes everything from the layout file and then adds what is in the individual page file.
-  * Where you see
-  ```jade
-    block content
-  ```
+  * As you can see with the ```extends layout``` at the top it takes everything from the layout file and then adds what is in the individual page file.
+  * Where you see ```block content``` in the index page is where the content that you define will be placed in the overall page where it was defined in the layout.jade
 
   ```jade
     extends layout
