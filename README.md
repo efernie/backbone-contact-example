@@ -21,7 +21,7 @@ Backbone Example
 
 <a name="introduction"> Introduction: </a>
 ---
-This repo is ment to serve as an example on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
+This repo is ment to serve as an example/comprehensive introduction on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
 
 <a name="libsused"> Libraries Used: </a>
 ---
@@ -69,7 +69,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 
   1. Install Node ([Install Wiki Page](https://github.com/joyent/node/wiki/Installation))
     * I personally like to install node from the source, that way when you need to update node all you have
-      to do is update the repo on you machine and check out the new branch and re-make node. (Yes I know there are other options but this is my way.)
+      to do is update the repo on you machine and check out the new branch and re-make node. (Yes I know there are other options but this is the way I prefer.)
     * If you already have node installed you can just clone the repo and run npm install.
 
   2. Create a new Directory (eg. Backbone Example)
@@ -82,9 +82,13 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
 ---
   1. Installing the npm packages
 
-    a. ```npm install express```
+    a. ```bash
+        $ npm install express
+       ```
 
-    b. ```npm install connect-gzip```
+    b. ```bash
+        $ npm install connect-gzip
+       ```
 
   2. Create the ```index.js``` file
 
@@ -103,10 +107,17 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
         ;
     ```
 
-  These are modules that node uses t
 
+  * Then the express server logic
 
-  * Then the express logic
+    Express is a very easy to use web framework for setting up node servers. THe documentation is excellent. Diving in to this
+    is very easy. Below you will find a set up example.
+
+      1. First should should have define the vars that require the express framework logic as seen above.
+      2. Then take the ```app``` and setup the configuration
+      3. I am using Jade for the views so point it to the dir that is holdign the views.
+        * When using Jade you can use a layout which holds the head information and base scripts that are required on all the
+          pages.
 
 
     ```javascript
@@ -125,6 +136,7 @@ This repo is ment to serve as an example on how to use require.js, backbone.js t
       app.use(app.router);
     ```
 
+  Jade is an excellent view engine for node
 <a name="startRequire"> Starting with Require.JS</a>
 ---
   1. Create a config.js file.
