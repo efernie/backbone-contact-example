@@ -121,6 +121,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
   4. Set the view options ```.set('view options', { 'layout': false, pretty: true }).set('view engine', 'jade');```
   5. Setup the other options which include the bodyParser, cookieParser, favicon, and gzip.
   6. Point the server to the directory that holds the application files (js,imgs,styles)
+  7. Connect the router. ```app.use(app.router);```
     * When using Jade you can use a layout which holds the header information and base scripts/styles that are required on all the pages.
 
 
@@ -140,6 +141,19 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
     app.use(app.router);
   ```
 
+  3. Set up the Routes
+
+    If you look in the ```index.js``` file you can see this ```require('./lib')(app);``` after the server config options.
+    I seperate the main server logic into the lib folder. This is so you can seperate the code in smaller files.
+
+    1. In the lib folder there needs to be an ```index.js``` file.
+      * This is going to include the pointer to the routes folder
+
+  ```javascript
+    module.exports = function () {
+      require('./routes').apply(this, arguments);
+    };
+  ```
 
 <a name="startRequire"> Starting with Require.JS</a>
 ---
