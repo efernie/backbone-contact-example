@@ -220,6 +220,22 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
         block scripts
   ```
 
+  * This would be what the index page might contain.
+  * As you can see with the ```jade
+  extends layout
+  ``` at the top it takes everything from the layout file and then adds what is in the individual page file.
+  * Where you see ```jade
+  block content
+  ```
+
+  ```jade
+    extends layout
+    block content
+      #main
+
+      footer
+  ```
+
 
 <a name="startRequire"> Starting with Require.JS</a>
 ---
