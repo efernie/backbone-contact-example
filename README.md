@@ -14,6 +14,8 @@ Backbone Example
 * [Directory Structure](#directorystructure)
 * [First Steps](#firststeps)
 * [Working witrh Node/Jade](#workingNode)
+  * [Node](#node)
+  * [Jade](#jade)
 * [Starting with Require](#startRequire)
 * [Main Application](#mainApplication)
 
@@ -80,15 +82,17 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
 <a name="workingNode"> Working With Node/Jade </a>
 ---
+## <a name="node">Node</a>
+
 ###1. Installing the npm packages
 
-      ```bash
-        $ npm install express
-      ```
+    ```bash
+      $ npm install express
+    ```
 
-       ```bash
-        $ npm install connect-gzip
-       ```
+    ```bash
+      $ npm install connect-gzip
+    ```
 
 ###2. Create the ```index.js``` file
 
@@ -193,7 +197,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   For the other pages what I am doing is just sending the view partial. In the main application logic what I am doing is sending a request ```'/somepagename'``` if it is not already cached on the client side. The server just has to return the partial page and it inserts it in the the ```main``` body. You will see the request later on.
 
-## Jade
+## <a name="jade">Jade</a>
 
   With Jade it makes coding the html pages easier and faster. Also with template inheritance you can seperate parts of the html that you might reuse across the site.
 
