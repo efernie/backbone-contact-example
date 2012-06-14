@@ -286,7 +286,25 @@ require.config({
     - shim : This is usefull because backbone requires jQuery and underscore to be loaded first before it can load.
     - hbs : Is the templating pulgin configuration.
 
+Now on to the main file
 
+```javascript
+  require([
+  'fernsworld',
+  // Libs
+  'jquery',
+  'underscore',
+  'backbone',
+
+  // Views
+  'views/views'
+
+  ],
+
+  function( FernsWorld, $, _, Backbone, views ){
+
+});
+```
 
 <a name="changelog"> Change Log:</a>
 ---
