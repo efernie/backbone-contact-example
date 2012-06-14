@@ -115,6 +115,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
     Express is a very easy to use web framework for setting up node servers. THe documentation is excellent. Diving in to this
     is very easy. Below you will find a set up example.
 
+
       1. First should should have define the vars that require the express framework logic as seen above.
       2. Then take the ```app``` and setup the configuration
       3. I am using Jade for the views so point it to the dir that is holdign the views.
