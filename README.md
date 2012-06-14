@@ -110,7 +110,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   * Then the express server logic
 
-    Express is a very easy to use web framework for setting up node servers. THe documentation is excellent. Diving in to this
+    Express is a very easy to use web framework for setting up node servers. The documentation is excellent. Diving in to this
     is very easy. Below you will find a set up example.
 
 
@@ -118,6 +118,9 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
   2. Then take the ```app``` that was defined and setup the configuration for the server.
   3. I am using Jade for the views so point it to the directory that is holding the views.
       ``` app.set('views', __dirname + '/views') ```
+  4. Set the view options ```.set('view options', { 'layout': false, pretty: true }).set('view engine', 'jade');```
+  5. Setup the other options which include the bodyParser, cookieParser, favicon, and gzip.
+  6. Point the server to the directory that holds the application files (js,imgs,styles)
     * When using Jade you can use a layout which holds the header information and base scripts/styles that are required on all the pages.
 
 
