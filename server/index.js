@@ -19,7 +19,7 @@ app.use(express.bodyParser())
    .use(gzip.gzip({ flags: '--best' }))
 ;
 
-app.use(express.static(__dirname + '/../client'));
+app.use(express.static( publicDir ));
 app.use(app.router);
 
 
