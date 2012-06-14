@@ -143,16 +143,41 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
 ###3. Set up the Routes
 
-    If you look in the ```index.js``` file you can see this ```require('./lib')(app);``` after the server config options.
-    I seperate the main server logic into the lib folder. This is so you can seperate the code in smaller files.
+  If you look in the ```index.js``` file you can see this ```require('./lib')(app);``` after the server config options.
+  I seperate the main server logic into the lib folder. This is so you can seperate the code in smaller files.
 
-    1. In the lib folder there needs to be an ```index.js``` file.
-      * This is going to include the pointer to the routes folder
+  1. In the lib folder there needs to be an ```index.js``` file.
+    * This is going to include the pointer to the routes file
 
   ```javascript
     module.exports = function () {
       require('./routes').apply(this, arguments);
     };
+  ```
+
+  2. In the routes file you will see this which has the very basic routes
+
+  ```javascript
+    module.exports = function (app) {
+
+      app.get('/data/sampledata',function(req,res){
+        res.send(sampleData);
+      });
+
+      // Index Page
+      app.get('/', function(req, res) {
+        res.render('index');
+      });
+
+
+      // All other pages
+      app.get('/:page',function(req,res) {
+
+        // View Partial
+        res.partial(req.params.page);
+      });
+
+    }
   ```
 
 <a name="startRequire"> Starting with Require.JS</a>
