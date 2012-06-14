@@ -122,6 +122,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
           pages.
 
 
+
     ```javascript
       app.set('views', __dirname + '/views')
         .set('view options', { 'layout': false, pretty: true })
