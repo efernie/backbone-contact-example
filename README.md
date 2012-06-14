@@ -16,8 +16,8 @@ Backbone Example
 * [Working witrh Node/Jade](#workingNode)
   * [Node](#node)
   * [Jade](#jade)
-* [Starting with Require](#startRequire)
 * [Main Application](#mainApplication)
+* [Starting with Require](#startRequire)
 
 * [Change Log](#changelog)
 
@@ -95,7 +95,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 ###2. Create the ```index.js``` file
 
 
-  * To start define the modules/other vars  needed
+  * To start define the modules/other vars needed
 
 
     ```javascript
@@ -199,6 +199,8 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   With Jade it makes coding the html pages easier and faster. Also with template inheritance you can seperate parts of the html that you might reuse across the site.
 
+  * Make sure you are using **spaces** in your editor. Jade is very picky about spaces/whitespace.
+
   * So an example layout might look like this.
 
   ```jade
@@ -214,7 +216,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
       body
         header
-          p standard header stuff could go here
+          p Standard header stuff could go here
 
         block content
 
@@ -224,16 +226,20 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   * This would be what the index page might contain.
   * As you can see with the ```extends layout``` at the top it takes everything from the layout file and then adds what is in the individual page file.
-  * Where you see ```block content``` in the index page is where the content that you define will be placed in the overall page where it was defined in the layout.jade
+  * Where you see ```block content``` in the index page is where the content that you define will be placed in the overall page where it was defined in the layout.jade file.
 
   ```jade
     extends layout
     block content
       #main
-
+        p Stuff goes here.
       footer
   ```
 
+<a name="mainApplication"> Main Application</a>
+---
+
+For this I will start to talk about how to use the different features of backbone. Also how to hook it up with Require.js. To Start I will go thorugh how to setp up the application.
 
 <a name="startRequire"> Starting with Require.JS</a>
 ---
@@ -273,8 +279,13 @@ require.config({
 });
 ```
 
-<a name="mainApplication"> Main Application</a>
----
+  As you can see there are different configuration options.
+    - baseUrl : This is the base path where the application will look for the modules.
+    - deps : This script is triggered when require is defined.
+    - paths : These are for if some scripts are not in the main ```src``` folder. I usually put the other libraries in the assets folder.
+    - shim : This is usefull because backbone requires jQuery and underscore to be loaded first before it can load.
+    - hbs : Is the templating pulgin configuration.
+
 
 
 <a name="changelog"> Change Log:</a>
