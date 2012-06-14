@@ -289,7 +289,7 @@ As you can see there are different configuration options.
 Now on to the main file
 
 ```javascript
-  require([
+require([
   'fernsworld',
   // Libs
   'jquery',
@@ -303,7 +303,8 @@ Now on to the main file
 
   function( FernsWorld, $, _, Backbone, views ){
 
-});
+  }
+);
 ```
 
 <a name="changelog"> Change Log:</a>
