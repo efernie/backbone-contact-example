@@ -80,7 +80,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
 <a name="workingNode"> Working With Node/Jade </a>
 ---
-  ###1. Installing the npm packages
+###1. Installing the npm packages
 
       ```bash
         $ npm install express
@@ -90,7 +90,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
         $ npm install connect-gzip
        ```
 
-  ###2. Create the ```index.js``` file
+###2. Create the ```index.js``` file
 
 
   * To start define the modules/other vars  needed
@@ -141,7 +141,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
     app.use(app.router);
   ```
 
-  ###3. Set up the Routes
+###3. Set up the Routes
 
     If you look in the ```index.js``` file you can see this ```require('./lib')(app);``` after the server config options.
     I seperate the main server logic into the lib folder. This is so you can seperate the code in smaller files.
