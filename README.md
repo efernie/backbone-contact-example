@@ -124,21 +124,21 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
 
 
-    ```javascript
-      app.set('views', __dirname + '/views')
-        .set('view options', { 'layout': false, pretty: true })
-        .set('view engine', 'jade');
+  ```javascript
+    app.set('views', __dirname + '/views')
+      .set('view options', { 'layout': false, pretty: true })
+      .set('view engine', 'jade');
 
 
-      app.use(express.bodyParser())
-         .use(express.cookieParser())
-         .use(express.favicon())
-         .use(gzip.gzip({ flags: '--best' }))
-      ;
+    app.use(express.bodyParser())
+       .use(express.cookieParser())
+       .use(express.favicon())
+       .use(gzip.gzip({ flags: '--best' }))
+    ;
 
-      app.use(express.static(__dirname + '/../client'));
-      app.use(app.router);
-    ```
+    app.use(express.static(__dirname + '/../client'));
+    app.use(app.router);
+  ```
 
   Jade is an excellent view engine for node
 <a name="startRequire"> Starting with Require.JS</a>
