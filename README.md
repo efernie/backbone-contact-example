@@ -87,13 +87,13 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 ###1. Installing the npm packages
 
 
-    ```bash
-      $ npm install express
-    ```
+  ```bash
+    $ npm install express
+  ```
 
-    ```bash
-      $ npm install connect-gzip
-    ```
+  ```bash
+    $ npm install connect-gzip
+  ```
 
 ###2. Create the ```index.js``` file
 
