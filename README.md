@@ -149,15 +149,16 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
   1. In the lib folder there needs to be an ```index.js``` file.
     * This is going to include the pointer to the routes file
 
-  ```javascript
+  ```js
     module.exports = function () {
       require('./routes').apply(this, arguments);
     };
   ```
 
   2. In the routes file you will see this which has the very basic routes
+    * ```res``` is short for response.
 
-  ```javascript
+  ```js
     module.exports = function (app) {
 
       app.get('/data/sampledata',function(req,res){
@@ -179,6 +180,17 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
     }
   ```
+
+  The basic route which renders the index page.
+
+  ```js
+    app.get('/', function(req, res) {
+      res.render('index');
+    });
+  ```
+
+  This listens for when the base url is sent then renders the index page.
+
 
 <a name="startRequire"> Starting with Require.JS</a>
 ---
