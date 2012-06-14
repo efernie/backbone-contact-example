@@ -82,11 +82,13 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 ---
   1. Installing the npm packages
 
-    a. ```bash
+    a.
+      ```bash
         $ npm install express
-       ```
+      ```
 
-    b. ```bash
+    b.
+       ```bash
         $ npm install connect-gzip
        ```
 
