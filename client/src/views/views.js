@@ -16,8 +16,7 @@ define([
   '../collections/collections'
 ],
 
-function( FernsWorld, $, _, Backbone, models, collections ) {
-
+function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
   // The Add Contact View
   FernsWorld.Views.Contact = Backbone.View.extend({
     el : '#addContact',
