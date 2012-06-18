@@ -3,24 +3,18 @@ var ENV = process.env['NODE_ENV'] || 'development'
   , _ = require('underscore')
   ;
 
-var sampleData = {
-  email : 'test@test.com',
-  firstName : 'fern',
-  lastName : 'fernberg'
-};
-
-var sampleData2 = {
-  person1 : {
+var sampleData = [
+  { person : {
     email : 'test@test.com',
     firstName : 'fern',
     lastName : 'fernberg'
-  },
-  person2 : {
+  } },
+  { person : {
     email : 'test2@test.com',
     firstName : 'arnold',
     lastName : 'schwarzenegger'
-  }
-};
+  } }
+];
 
 module.exports = function (app) {
 

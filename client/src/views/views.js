@@ -30,12 +30,8 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         // Bind the Contact collection to the view
         that.collection = FernsWorld.Collections.ContactCollections;
 
-        // Bind the add/reset event to the collection
+        // Bind the add event to the collection
         that.collection.on('add', that.render, this);
-
-        that.collection.on('reset', that.render, this);
-        // Fetch the collection from server.
-        that.collection.fetch();
 
     }
     , saveContact : function (event){
@@ -52,12 +48,14 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         this.model.on('change', this.modelChange, this);
 
         var values = $(event.currentTarget).parent().serializeArray()
-          , modelObj = {}
+          , modelObj = {
+              person : {}
+            }
           ;
 
-        // Go through the Array's Values and Keys and psuh them into a new object
+        // Go through the Array's Values and Keys and push them into a new object
         _.each(values, function (v) {
-          modelObj[_.values(v)[0]] = _.values(v)[1];
+          modelObj.person[_.values(v)[0]] = _.values(v)[1];
         });
 
         // Empty the inputs
@@ -65,7 +63,6 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
 
         // Set the Model
         // The Model auto validates
-
         return this.model.set( modelObj );
 
       }
@@ -74,12 +71,15 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         console.log(model, error, this)
       }
     , modelChange : function (model) {
-        // WHen a model successfully validates add it to the collection
+        // When a model successfully validates add it to the collection
         FernsWorld.Collections.ContactCollections.add(model);
       }
     , render : function() {
         // Trigger the contact list view
-        FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
+        console.log('render', FernsWorld.Views.contactList)
+        //FernsWorld.Views.contactList.collection = this.collection;
+        FernsWorld.Views.contactList.render();
+        //FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
       }
   });
 
@@ -88,10 +88,14 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       el : '#listContacts'
     , initialize : function(){
         var that = this;
+        console.log('view init',that)
+
+        // Bind reset event to the collection
+        that.collection.on('reset', that.render, this);
+
         // If the template is not in cache then fetch it
         if( FernsWorld.Templates['contactView'] ){
-          console.log('render')
-          that.render();
+          that.collection.fetch();
         }else{
           // Grab the contact template
           require(['hbs!templates/contact'], function (contactView) {
@@ -99,7 +103,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
             FernsWorld.Templates['contactView'] = contactView;
 
             // Render the view object
-            that.render();
+            that.collection.fetch();
           });
         }
       }
@@ -110,9 +114,9 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         that.$el.empty();
         // Go through each model in the collection
         _.each(that.collection.models, function (model) {
+
           // Append each model to the view el
-          that.$el.append( FernsWorld.Templates.contactView( model.attributes ) );
-          //that.$el.append( that.contactTemplate( model.attributes ) );
+          that.$el.append( FernsWorld.Templates.contactView( model.attributes.person ) );
         });
       }
   });

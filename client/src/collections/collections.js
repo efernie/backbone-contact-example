@@ -14,7 +14,6 @@ function( FernsWorld, $, _, Backbone, models ) {
       model : FernsWorld.Models.Contact
     , url : '/data/sampledata'
     , parse : function (response) {
-        console.log( response )
         return response;
       }
   });

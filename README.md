@@ -2,6 +2,7 @@ Backbone Example
 ================
 
 ### This is my attempt to make and example Contact Manager for a blog post.
+##### This is a work in progress.
 
 ### Version: 0.1
 
