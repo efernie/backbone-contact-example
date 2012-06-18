@@ -47,7 +47,9 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         // Bind the view modelChange function to the model change event
         this.model.on('change', this.modelChange, this);
 
+        // Serialize the values into an array
         var values = $(event.currentTarget).parent().serializeArray()
+          // The model object the is the same on the server side
           , modelObj = {
               person : {}
             }
@@ -76,10 +78,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       }
     , render : function() {
         // Trigger the contact list view
-        console.log('render', FernsWorld.Views.contactList)
-        //FernsWorld.Views.contactList.collection = this.collection;
         FernsWorld.Views.contactList.render();
-        //FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
       }
   });
 
@@ -88,13 +87,13 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       el : '#listContacts'
     , initialize : function(){
         var that = this;
-        console.log('view init',that)
 
         // Bind reset event to the collection
         that.collection.on('reset', that.render, this);
 
         // If the template is not in cache then fetch it
         if( FernsWorld.Templates['contactView'] ){
+          // Fetch the collection
           that.collection.fetch();
         }else{
           // Grab the contact template
@@ -102,7 +101,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
             // Save the template to the view object
             FernsWorld.Templates['contactView'] = contactView;
 
-            // Render the view object
+            // Fetch the collection
             that.collection.fetch();
           });
         }
