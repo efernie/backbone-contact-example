@@ -43,8 +43,10 @@ function( $, _, Backbone ) {
         }
       });
     },
-    errorHandler : function(){
+    errorHandler : function(error){
+      console.log(error)
       $('#main').text('404');
     }
   };
 });
+
