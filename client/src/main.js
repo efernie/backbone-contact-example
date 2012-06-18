@@ -20,7 +20,8 @@ require([
     FernsWorld.ViewManager = function (page) {
       switch (page) {
         case 'home':
-          new FernsWorld.Views.Contact({ model : new FernsWorld.Models.Contact() });
+          //new FernsWorld.Views.Contact({ model : new FernsWorld.Models.Contact() });
+          FernsWorld.Views.contact = new FernsWorld.Views.Contact({ model : new FernsWorld.Models.Contact() });
         break;
       }
     };

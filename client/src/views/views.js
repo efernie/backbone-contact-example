@@ -18,19 +18,6 @@ define([
 
 function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
 
-  // Fetch the collection from server.
-  FernsWorld.Collections.ContactCollections.fetch();
-
-  // Bind an add event to the collectino so when it is updated
-  FernsWorld.Collections.ContactCollections.on('add',function(event){
-    //that.render();
-  });
-
-  // Bind the reset event which happens when the collection is fetched from the server
-  FernsWorld.Collections.ContactCollections.on('reset',function(event){
-    //that.render();
-  });
-
   // The Add Contact View
   FernsWorld.Views.Contact = Backbone.View.extend({
       el : '#addContact'
@@ -39,6 +26,16 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       }
     , initialize : function (){
         var that = this;
+
+        // Bind the Contact collection to the view
+        that.collection = FernsWorld.Collections.ContactCollections;
+
+        // Bind the add/reset event to the collection
+        that.collection.on('add', that.render, this);
+
+        that.collection.on('reset', that.render, this);
+        // Fetch the collection from server.
+        that.collection.fetch();
 
     }
     , saveContact : function (event){
@@ -82,9 +79,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       }
     , render : function() {
         // Trigger the contact list view
-        console.log( FernsWorld.Views )
-        //FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
-        //var contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
+        FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : this.collection });
       }
   });
 

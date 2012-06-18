@@ -9,6 +9,19 @@ var sampleData = {
   lastName : 'fernberg'
 };
 
+var sampleData2 = {
+  person1 : {
+    email : 'test@test.com',
+    firstName : 'fern',
+    lastName : 'fernberg'
+  },
+  person2 : {
+    email : 'test2@test.com',
+    firstName : 'arnold',
+    lastName : 'schwarzenegger'
+  }
+};
+
 module.exports = function (app) {
 
   app.get('/data/sampledata', function (req, res) {

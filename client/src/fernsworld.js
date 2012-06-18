@@ -35,7 +35,7 @@ function( $, _, Backbone ) {
           $main.empty();
         },
         success : function(data) {
-          // Put hte page into the cache
+          // Put the page into the cache
           that.Templates[name] = data;
           // Append the page to the main body tag.
           $main.append(data);
