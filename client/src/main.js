@@ -11,6 +11,8 @@ require([
   ],
 
   function( FernsWorld, $, _, Backbone, views ){
+
+    // Start of an error handler
     FernsWorld.loadPage.prototype.errorHandler = function (){
       console.log('error')
     };

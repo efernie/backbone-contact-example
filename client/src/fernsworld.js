@@ -31,10 +31,13 @@ function( $, _, Backbone ) {
         'type': 'GET',
         'dataType': 'html',
         beforeSend : function(){
+          // Empty the contents from the main body tag
           $main.empty();
         },
         success : function(data) {
+          // Put hte page into the cache
           that.Templates[name] = data;
+          // Append the page to the main body tag.
           $main.append(data);
           return cb({ error : false });
         },
