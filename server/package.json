@@ -1,6 +1,6 @@
 {
-  "name": "Ember_Node_Tests",
-  "description": "Working with Ember and Node and Jade",
+  "name": "backbone_contact_example",
+  "description": "A Backbone Contact manager example",
   "version": "0.0.1",
   "dependencies": {
     "express": "2.x",
