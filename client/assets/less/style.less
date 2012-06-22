@@ -1,15 +1,23 @@
 @import: "/assets/less/reset.less";
 
+// Color Palette One
 @lightBrown: rgb(217,206,178);
 @offBrown: rgb(148,140,117);
 @lightBlue: rgb(213,222,217);
 @brown: rgb(122,106,83);
 @midBlue: rgb(153,178,183);
 
+// Color Palette Two
+@blue: rgb(0,160,176);
+@brown: rgb(106,74,60);
+@red: rgb(204,51,63);
+@orange: rgb(235,104,65);
+@yellow: rgb(237,201,81);
+
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 body{
-  background: @lightBlue;
+  background: @yellow;
   color: @brown;
   font-family: 'Inconsolata', sans-serif;
   position: relative;
@@ -18,7 +26,7 @@ body{
 header{
 
   nav{
-    border-bottom: 1px solid @offBrown;
+    border-bottom: 1px solid @blue;
     width: 100%;
     ul{
       margin: 0;
@@ -28,7 +36,14 @@ header{
       display: inline-block;
       margin: 0 10px;
       a{
+        color: @blue;
         text-decoration: none;
+        &:visited{
+          color: @blue;
+        }
+        &:hover{
+          color: @red;
+        }
       }
     }
   }
@@ -39,9 +54,6 @@ h1{
 }
 h2{
   color: @offBrown;
-}
-a, a:visited, a:hover{
-  color: @brown;
 }
 
 #addContact{

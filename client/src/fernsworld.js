@@ -27,7 +27,8 @@ function( $, _, Backbone ) {
       }
       // If not already loaded into the template object call it from the server
       $.ajax({
-        'url': '/' + name,
+        'url': 'partial/' + name,
+        //'url': name,
         'type': 'GET',
         'dataType': 'html',
         beforeSend : function(){

@@ -30,9 +30,17 @@ module.exports = function (app) {
 
   // All other pages
   app.get('/:page', function (req, res) {
+    console.log('/:page',req.params.page)
+    // Page
+    res.render(req.params.page, {layout: true});
+    //res.partial(req.params.page);
+  });
 
+  app.get('/partial/:page', function (req, res) {
+    console.log('/partial/:page', req.params.page)
     // View Partial
     res.partial(req.params.page);
   });
 
 };
+

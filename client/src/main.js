@@ -21,7 +21,9 @@ require([
       switch (page) {
         case 'home':
           FernsWorld.Views.contact = new FernsWorld.Views.Contact();
-          FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({ collection : FernsWorld.Collections.ContactCollections });
+          FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({
+            collection : FernsWorld.Collections.ContactCollections
+          });
         break;
       }
     };
@@ -34,9 +36,10 @@ require([
           , ':page': 'pages'
         }
       , index: function() {
-          FernsWorld.loadPage('home', function (error) {
+        console.log('index')
+          //FernsWorld.loadPage('home', function (error) {
             FernsWorld.ViewManager('home');
-          });
+          //});
         }
       , pages : function (page) {
           console.log(page)
@@ -54,7 +57,7 @@ require([
       new FernsWorld.Router.Main;
 
       // Start the History
-      Backbone.history.start({pushState : true});
+      Backbone.history.start({ pushState : true });
     });
 
 
@@ -76,6 +79,7 @@ require([
         // `Backbone.history.navigate` is sufficient for all Routers and will
         // trigger the correct events. The Router's internal `navigate` method
         // calls this anyways.
+        console.log('href',href)
         Backbone.history.navigate(href, true);
       }
     });

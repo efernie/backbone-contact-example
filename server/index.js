@@ -7,7 +7,7 @@ var express = require('express')
   , publicDir = __dirname + '/../client'
   ;
 
-
+// View setup
 app.set('views', __dirname + '/views')
   .set('view options', { 'layout': false, pretty: true })
   .set('view engine', 'jade');
@@ -19,12 +19,16 @@ app.use(express.bodyParser())
    .use(gzip.gzip({ flags: '--best' }))
 ;
 
+// All other files
 app.use(express.static(publicDir));
+
+// App router
 app.use(app.router);
 
-
+// App logic
 require('./lib')(app);
 
+// Cluster
 if (cluster.isMaster) {
 
   for (var i = 1 - 1; i >= 0; i--) {
@@ -39,4 +43,4 @@ if (cluster.isMaster) {
     var addr = app.address();
     console.log(('app listening on http://' + addr.address + ':' + addr.port));
   });
-}
+};
