@@ -1,6 +1,6 @@
 {
-  "name": "backbone_contact_example",
-  "description": "A Backbone Contact manager example",
+  "name": "Backbone_Example",
+  "description": "Working with Backbone and Node and Jade",
   "version": "0.0.1",
   "dependencies": {
     "express": "2.x",
