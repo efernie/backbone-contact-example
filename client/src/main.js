@@ -13,7 +13,7 @@ require([
   function( FernsWorld, $, _, Backbone, views ){
 
     // Start of an error handler
-    FernsWorld.loadPage.prototype.errorHandler = function (){
+    FernsWorld.loadPage.prototype.errorHandler = function () {
       console.log('error')
     };
     // A view Manager to tigger the different views after the routes
@@ -36,13 +36,11 @@ require([
           , ':page': 'pages'
         }
       , index: function() {
-        console.log('index')
-          //FernsWorld.loadPage('home', function (error) {
+          FernsWorld.indexPageHandler(function (error) {
             FernsWorld.ViewManager('home');
-          //});
+          });
         }
       , pages : function (page) {
-          console.log(page)
           FernsWorld.loadPage(page , function (error) {
             if ( error.error === true ) {
               //return FernsWorld.errorHandler();
@@ -64,7 +62,7 @@ require([
     /*
       This is borrowed from https://gist.github.com/1142129 by tbranyen
      */
-    $(document).on("click", "a:not([data-bypass])", function(evt) {
+    $(document).on("click", "a:not([data-bypass])", function (evt) {
       // Get the anchor href and protcol
       var href = $(this).attr("href");
       var protocol = this.protocol + "//";
@@ -79,7 +77,6 @@ require([
         // `Backbone.history.navigate` is sufficient for all Routers and will
         // trigger the correct events. The Router's internal `navigate` method
         // calls this anyways.
-        console.log('href',href)
         Backbone.history.navigate(href, true);
       }
     });

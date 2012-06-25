@@ -1,21 +1,18 @@
 extends layout
 block content
-  #main
-    h1 Hello World
+  h1 Hello World
 
-    h2 Add a contact
-    form()#addContact
-      label First Name
-      input(type="text",name="firstName")
+  h2 Add a contact
+  form()#addContact
+    label First Name
+    input(type="text",name="firstName")
 
-      label Last Name
-      input(type="text",name="lastName")
+    label Last Name
+    input(type="text",name="lastName")
 
-      label Email
-      input(type="text",name="email")
+    label Email
+    input(type="text",name="email")
 
-      button()#submit Save
+    button()#submit Save
 
-    #listContacts
-  footer
-
+  #listContacts

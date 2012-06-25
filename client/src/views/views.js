@@ -24,7 +24,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
     , events : {
         'click #submit' : 'saveContact'
       }
-    , initialize : function (){
+    , initialize : function () {
         var that = this;
 
         // Bind the Contact collection to the view
@@ -34,7 +34,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         that.collection.on('add', that.render, this);
 
     }
-    , saveContact : function (event){
+    , saveContact : function (event) {
         // Prevent the Default Submit Funciton
         event.preventDefault();
 
@@ -68,7 +68,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
         return this.model.set( modelObj );
 
       }
-    , modelError : function (model,error) {
+    , modelError : function (model, error) {
         // When there is a validation error on the model this is where everything is handled
         console.log(model, error, this)
       }
@@ -85,7 +85,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
   // This view is for displaying the list of contacts
   FernsWorld.Views.ContactList = Backbone.View.extend({
       el : '#listContacts'
-    , initialize : function(){
+    , initialize : function () {
         var that = this;
 
         // Bind reset event to the collection
@@ -106,7 +106,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
           });
         }
       }
-    , render : function(){
+    , render : function () {
         var that = this;
 
         // Clear the list

@@ -24,18 +24,19 @@ module.exports = function (app) {
 
   // Index Page
   app.get('/', function (req, res) {
+    console.log('index')
     res.render('index');
   });
 
 
-  // All other pages
+  // All other pages initial render
   app.get('/:page', function (req, res) {
     console.log('/:page',req.params.page)
     // Page
     res.render(req.params.page, {layout: true});
-    //res.partial(req.params.page);
   });
 
+  // All other pages partial
   app.get('/partial/:page', function (req, res) {
     console.log('/partial/:page', req.params.page)
     // View Partial

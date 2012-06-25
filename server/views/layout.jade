@@ -26,8 +26,10 @@ html(lang="en").no-js
             a(href="#docs") Docs
           li
             a(href="#push") PushState
+    #main
+      block content
 
-    block content
+    footer
 
     script(data-main="/src/config", src="/assets/js/require.js")
     block scripts
