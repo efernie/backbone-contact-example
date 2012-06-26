@@ -199,7 +199,7 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
 
   This listens for when the base url is sent then renders the index page.
 
-  For the other pages what I am doing is just sending the view partial. In the main application logic what I am doing is sending a request ```'/somepagename'``` if it is not already cached on the client side. The server just has to return the partial page and it inserts it in the the ```main``` body. You will see the request later on.
+  For the other pages what I am doing is just sending the view partial. In the main application logic what I am doing is sending a request ```'/somepagename'``` if it is not already cached on the client side. The server just has to return the partial page and it inserts it in the the ```main``` body. You will see the request later on. But if the user navigates directly to a page it sends the page along with the layout.
 
 ## <a name="jade">Jade</a>
 
