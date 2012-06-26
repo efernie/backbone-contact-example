@@ -6,4 +6,5 @@ exports.development = {
 exports.production = {
     port : 80
   , title : 'Ferns World'
+  , buildDir : '/../build'
 };

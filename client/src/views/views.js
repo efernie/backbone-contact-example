@@ -70,7 +70,7 @@ function( FernsWorld, $, _, Backbone, hbs, models, collections ) {
       }
     , modelError : function (model, error) {
         // When there is a validation error on the model this is where everything is handled
-        console.log(model, error, this)
+        console.log(model, error, this);
       }
     , modelChange : function (model) {
         // When a model successfully validates add it to the collection

@@ -4,7 +4,7 @@ var express = require('express')
   , cluster = require('cluster')
   , gzip = require('connect-gzip')
   , app = express.createServer()
-  , publicDir = __dirname + '/../client'
+  , publicDir = __dirname + (config.buildDir || '/../client')
   ;
 
 // View setup
@@ -33,7 +33,7 @@ if (cluster.isMaster) {
 
   for (var i = 1 - 1; i >= 0; i--) {
     cluster.fork();
-  };
+  }
 
   cluster.on('death', function(worker) {
     console.log('worker ' + worker.pid + ' died');
@@ -43,4 +43,4 @@ if (cluster.isMaster) {
     var addr = app.address();
     console.log(('app listening on http://' + addr.address + ':' + addr.port));
   });
-};
+}

@@ -11,28 +11,16 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
     },
-    // lint: {
-    //   files: ['grunt.js', 'server/index.js']//'server/**/*.js', 'client/**/*.js']
-    // },
-    // qunit: {
-    //   files: ['test/**/*.html']
-    // },
-    concat: {
-      dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
+    lint: {
+      files: [
+          'grunt.js'
+        , 'server/lib/*'
+        , 'server/index.js'
+        , 'client/src/*/*.js'
+        , 'client/src/*js'
+      ]
     },
-    min: {
-      dist: {
-        src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    watch: {
-      files: '<config:lint.files>',
-      tasks: 'lint qunit'
-    },
+
     jshint: {
       options: {
         curly: true,
@@ -47,16 +35,31 @@ module.exports = function(grunt) {
         eqnull: true,
         laxcomma: true,
         browser: true,
+        es5: true,
+        scripturl: true,
         node: true
       },
       globals: {
-        jQuery: true
+        jQuery: true,
+        define: true
       }
     },
-    uglify: {}
+    uglify: {},
+    // require js
+    requirejs: {
+      mainConfigFile: "client/src/config.js",
+      out: "../client/dist/fernsworld.js",
+      name: "config",
+      wrap: false
+    }
   });
 
+  // Load outside npmtasks
+  grunt.loadNpmTasks('grunt-requirejs');
+
   // Default task.
-  grunt.registerTask('default', 'lint concat min');
+  grunt.registerTask('default', 'lint requirejs');
 
 };
+
+

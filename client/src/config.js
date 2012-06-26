@@ -1,7 +1,7 @@
 
 require.config({
   // Base public url
-  baseUrl: 'src/',
+  //baseUrl: 'src/',
 
   // Trigger the main.js file to init the app
   deps : ['main'],

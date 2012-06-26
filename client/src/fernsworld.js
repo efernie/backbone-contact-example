@@ -49,7 +49,7 @@ function( $, _, Backbone ) {
       });
     },
     errorHandler : function (error) {
-      console.log(error)
+      console.log(error);
       $('#main').text('404');
     },
     indexPageHandler : function (cb) {
@@ -58,14 +58,14 @@ function( $, _, Backbone ) {
         ;
 
       // If the index page is already stored grab it and load it
-      if( FernsWorld.Pages['index'] ) {
+      if( that.Pages['index'] ) {
         $main
           .empty()
           .append(that.Pages['index']);
         return cb();
       }
       // If this is the first page upon visit or refresh store it in the pages
-      if( _.isEmpty(FernsWorld.Pages) ) {
+      if( _.isEmpty(that.Pages) ) {
         var indexHTML = $main.html();
         that.Pages['index'] = indexHTML;
         return cb();

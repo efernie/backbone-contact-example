@@ -14,7 +14,7 @@ require([
 
     // Start of an error handler
     FernsWorld.loadPage.prototype.errorHandler = function () {
-      console.log('error')
+      console.log('error');
     };
     // A view Manager to tigger the different views after the routes
     FernsWorld.ViewManager = function (page) {
@@ -24,6 +24,9 @@ require([
           FernsWorld.Views.contactList = new FernsWorld.Views.ContactList({
             collection : FernsWorld.Collections.ContactCollections
           });
+        break;
+        case 'about':
+
         break;
       }
     };
@@ -52,7 +55,7 @@ require([
     $(function(){
 
       // Load the Router on Dom Ready
-      new FernsWorld.Router.Main;
+      new FernsWorld.Router.Main();
 
       // Start the History
       Backbone.history.start({ pushState : true });
