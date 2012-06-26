@@ -24,7 +24,7 @@ Backbone Example
 
 <a name="introduction"> Introduction: </a>
 ---
-This repo is ment to serve as an example/comprehensive introduction on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer.
+This repo is ment to serve as an example/comprehensive introduction on how to use require.js, backbone.js together in harmony. Also I will show the basics of Node. I have been using backbone for a while now and wanted to take a crack at seeing if I could possibly teach others how to use the library to the fullest extent. Also wanted to teach you about using require.js to help understand the way AMD works. These instructions will go over most of what backbone has to offer. Also now included is push state.
 
 <a name="libsused"> Libraries Used: </a>
 ---
@@ -173,6 +173,11 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
         res.render('index');
       });
 
+      // All other pages initial render
+      app.get('/:page', function (req, res) {
+        // Page
+        res.render(req.params.page, {layout: true});
+      });
 
       // All other pages
       app.get('/:page',function(req,res) {
