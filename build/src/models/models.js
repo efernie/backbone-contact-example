@@ -1,1 +1,0 @@
-define(["fernsworld","jquery","underscore","backbone"],function(a,b,c,d){return a.Models.Contact=d.Model.extend({validate:function(a){var b=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!b.test(a.person.email))return"Email Error"}}),a})

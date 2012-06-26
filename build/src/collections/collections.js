@@ -1,1 +1,0 @@
-define(["fernsworld","jquery","underscore","backbone","../models/models"],function(a,b,c,d,e){return a.Collections.Contacts=d.Collection.extend({model:a.Models.Contact,url:"/data/sampledata",parse:function(a){return a}}),a.Collections.ContactCollections=new a.Collections.Contacts,a})
