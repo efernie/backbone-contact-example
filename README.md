@@ -180,8 +180,13 @@ This repo is ment to serve as an example/comprehensive introduction on how to us
         res.render('index');
       });
 
+      // All other pages initial render
+      app.get('/:page', function (req, res) {
+        // Page
+        res.render(req.params.page, {layout: true});
+      });
 
-      // All other pages
+      // All other pages partial
       app.get('/:page',function(req,res) {
 
         // View Partial

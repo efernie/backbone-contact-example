@@ -11,9 +11,9 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
     },
-    lint: {
-      files: ['grunt.js', 'server/index.js']//'server/**/*.js', 'client/**/*.js']
-    },
+    // lint: {
+    //   files: ['grunt.js', 'server/index.js']//'server/**/*.js', 'client/**/*.js']
+    // },
     // qunit: {
     //   files: ['test/**/*.html']
     // },
