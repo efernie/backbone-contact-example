@@ -20,6 +20,8 @@ Backbone Example
 * [Main Application](#mainApplication)
 * [Starting with Require](#startRequire)
 
+* [Grunt](https://github.com/efernie/backbone-contact-example/tree/grunt#grunt)
+
 * [Change Log](#changelog)
 
 <a name="introduction"> Introduction: </a>
