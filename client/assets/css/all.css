@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+body {
+  background: #edc951;
+  color: #6a4a3c;
+  font-family: 'Inconsolata', sans-serif;
+  position: relative;
+}
+header nav {
+  border-bottom: 1px solid #00a0b0;
+  width: 100%;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+header nav li a {
+  color: #00a0b0;
+  text-decoration: none;
+}
+header nav li a:visited {
+  color: #00a0b0;
+}
+header nav li a:hover {
+  color: #cc333f;
+}
+h1 {
+  color: #6a4a3c;
+}
+h2 {
+  color: #948c75;
+}
+#addContact {
+  border: 3px solid #948c75;
+  height: 175px;
+  padding: 15px;
+  width: 175px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#addContact input {
+  display: block;
+  margin-bottom: 10px;
+  width: 150px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#listContacts {
+  border-top: 1px solid #948c75;
+  margin: 15px 0 0 0;
+}
+#listContacts h3 {
+  background: white;
+  color: black;
+}

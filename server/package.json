@@ -8,6 +8,7 @@
     "jade": "0.20.x",
     "connect-gzip": "x",
     "grunt": "0.3.9",
+    "grunt-less": "0.1.5",
     "grunt-requirejs": "0.2.8"
   }
 }

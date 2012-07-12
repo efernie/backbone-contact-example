@@ -60,14 +60,32 @@ module.exports = function(grunt) {
       //dir: '../build',
       //name: "config",
       //wrap: false
+    },
+
+    less : {
+       all: {
+        src: '../client/assets/less/style.less',
+        dest: '../client/assets/css/all.css',
+        options: {
+          //compress: true
+        }
+      }
+    },
+
+    watch : {
+      files: '<config:less.all.src>',
+      tasks: 'less'
     }
   });
 
   // Load outside npmtasks
   grunt.loadNpmTasks('grunt-requirejs');
+  grunt.loadNpmTasks('grunt-less');
 
   // Default task.
-  grunt.registerTask('default', 'lint requirejs');
+  grunt.registerTask('default', 'lint less requirejs');
+
+  //grunt.registerTask('less', 'less');
 
 };
 
